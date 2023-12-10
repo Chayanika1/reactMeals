@@ -25,6 +25,7 @@ const cartReducer = (state,action)=>{
        
         
         const updatedTotalAmount = state.totalAmount+action.item.price * action.item.amount;
+        console.log({items:updatedItems,totalAmount:updatedTotalAmount})
         return{
             items:updatedItems,
             totalAmount:updatedTotalAmount
@@ -59,6 +60,7 @@ const cartReducer = (state,action)=>{
     return defaultCartState;
 
 }
+console.log()
 const CartProvider = (props) => {
    const[cartState,dispatchCartAction]= useReducer(cartReducer,defaultCartState)//ueReducer always returns an array
     const addItemCartHandler=(item)=>{

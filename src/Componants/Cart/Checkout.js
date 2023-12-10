@@ -16,7 +16,7 @@ const Checkout = (props) => {
    e.preventDefault();
    const enetredName = nameInput.current.value;
    const enteredStreetName = streetInput.current.value;
-   const enteredPostal = streetInput.current.value;
+   const enteredPostal = postalInput.current.value;
    const enteredCity = cityInput.current.value;
    const enteredNameIsValid = !isEmpty(enetredName);
    const streetIsValid = !isEmpty(enteredStreetName);
@@ -36,7 +36,7 @@ setFormInputValidity({
    }
    props.onConfirm({
     name:enetredName,
-    street:enteredCity,
+    street:enteredStreetName,
     postal:enteredPostal,
     city:enteredCity
 
